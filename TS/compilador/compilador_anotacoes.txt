@@ -1,0 +1,38 @@
+CONFIGURAÇÕES DO TSCONFIG.JSON
+
+"compilerOptions": {
+    //versão final de compilação JS (padrão ES5)
+        "target": "es5",
+    
+    //Impedir compilação com erro:
+        "noEmitOnError": true,
+    
+    //criar arquivo .map para depuração e/ou visualização no navegador TS
+        "sourceMap": true,
+    
+    //não atribuir implicitamente tipo 'any' (recomendado/padrão: true), mas...
+    //o compilador vai analisar o código e tentar determinar se realmente é 'any'
+    //antes de mostrar erro!
+        "noImplicitAny": true, 
+
+    //verificação de possível retorno 'Null' não desejado (padrão: true)
+        "strictNullChecks": true,
+
+    //verifica parâmetros não utilizados (padrão: true)
+        "noUnusedParameters": true,
+
+    //verifica variáveis locais não utilizadas (padrão: true)
+        "noUnusedLocals": true,
+
+    //pasta de saída
+        "outDir": "./build"
+
+    //gerar um único arquivo de saída (incompatível com commonjs!)
+        "module": "system", (exemplo)
+        "outFile": "./build/app.js",
+}
+
+https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+https://www.typescriptlang.org/docs/handbook/compiler-options.html
+    

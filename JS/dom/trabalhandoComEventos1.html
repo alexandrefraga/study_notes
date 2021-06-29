@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <a espera-um-pouco href="https://google.com.br">Google</a>
+            <!-- onclick="navegarEm5s(event)" -->
+            <!-- tem que passar o event -->
+            <!-- usando atributo personalizado fica indicado no html o uso pelo javascript-->
+    </div>
+    <div>
+        <a espera-seg = '2' href="https://google.com.br">Google</a>
+    </div>
+    <script>
+        function navegarEm5s(e) {
+            e.preventDefault()
+            console.log('saindo em 5s')
+            setTimeout( () => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+
+        const a = document.querySelector('[espera-um-pouco]')
+        a.onclick = navegarEm5s
+
+        function navegarEm (e) {
+            e.preventDefault()
+            const time = e.target.attributes['espera-seg'].value
+            console.log(`saindo em ${time} segundos`)
+            setTimeout( () => {
+                const link = e.target
+                window.location.href = link.href
+            }, time * 1000)
+        }
+
+        const b = document.querySelector('[espera-seg]')
+        b.onclick = navegarEm
+
+
+    </script>
+</body>

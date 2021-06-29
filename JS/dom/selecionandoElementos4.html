@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <p>Início</p>
+    </div>
+    <div>
+        <ul>
+            <li>Pedro</li>
+            <li>Ana</li>
+            <li>Bia</li>
+        </ul>
+    </div>
+    <div>
+        <p>Fim</p>
+    </div>
+    <script>
+        function log(f = 'não informado') {
+            console.log(f + ': ', this)
+        }
+        //acrescentando console.log ao prototype...
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        const lista = document.querySelector('div ul')
+        lista.parentNode.log('parentNode')
+        lista.childNodes.log('childNodes') //mostra espaços html
+
+        const primeiro = lista.firstChild
+        primeiro.log('firstChild')
+        primeiro.nextSibling.log('nextSibling')
+
+        const ultimo = lista.lastChild
+        ultimo.log('lastChild')
+        ultimo.previousSibling.log('previousSibling')
+
+        lista.children.log('children')
+        lista.firstElementChild.log( 'firstElementChild' )
+        lista.lastElementChild.log( 'lastElementChild' )
+        lista.parentNode.previousElementSibling.log('parentNode.previous..')
+
+        document.querySelectorAll('div ul li').log('querySelectorAll')
+
+
+    </script>
+</body>
+
+</html>

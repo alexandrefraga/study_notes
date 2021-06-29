@@ -1,0 +1,11 @@
+let qualquer = 'Legal'
+console.log(qualquer)
+console.log(typeof qualquer)
+qualquer=3.55
+console.log(qualquer)
+console.log(typeof qualquer)
+
+//evitar nome genérico ou siglas para declarar variáveis
+let valor = ""
+let numero = 1
+let pqp = false
