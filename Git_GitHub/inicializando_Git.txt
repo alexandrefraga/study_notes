@@ -1,0 +1,32 @@
+-> Criar pasta do projeto; ex: "MyProject"
+  -> Entrar na pasta; 
+    
+    *abrir/iniciar repositório*
+      git init
+    
+    *mostrar status*
+      git status
+    
+    *iniciar o controle de versao do arquivo*
+      git add nomedoarquivo.extensao
+      git add *.extensao
+      git add .   (todos)
+
+    *enviar para repositório principal*
+      git commit -m "mensagem descritiva do commit"
+
+-> criar arquivo ignorado pelo git
+  .gitignore (sem extensão)
+  listar dentro dele os arquivos a serem ignorados inclusive .gitignore
+    anotacoespessoais.txt
+    diretorio/
+    *.txt
+    ...sempre um arquivo por linha!
+
+- clonagem repositório
+git clone git@github.com:alexandrefraga/local.git (nome diretorio se desejar renomear, sem aspas)
+
+
+- SALVANDO ALTERAÇÕES GITHUB
+git push origin master
+- Teste
