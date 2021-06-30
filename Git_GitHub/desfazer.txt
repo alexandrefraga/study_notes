@@ -1,0 +1,10 @@
+* retornar um arquivo "sample.txt" (status: modified) ao estado anterior a alteração*
+    -> git checkout sample.txt
+
+* retornar um arquivo "sample.txt" (status: staged) ao estado anterior (status: modified)*
+    -> git reset HEAD sample.txt
+
+* retornar um arquivo "sample.txt" já commitado
+    -> git reset --soft hashdocommitanterior (retorna ao commit anterior adicionado dos arquivos modificados em staged)
+    -> git reset --mixed hashdocommitanterior (retorna ao commit anterior adicionado dos arquivos modificados - modified)
+    -> git reset --hard hashdocommitanterior (retorna ao commit anterior, sem alterações posteriores)

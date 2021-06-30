@@ -1,3 +1,11 @@
 -> git log
 -> git log --decorate
--> git log --author-"Alexandre"
+-> git log --author="Alexandre Fraga"
+-> git log --graph
+-> git shortlog
+-> git shortlog -sn
+
+*visualizar o commit*
+-> git show cdec7be4446aa4deecdc712cfb1e04dc24e6bc09 (hash do commit)
+    -> q (sair)
+    

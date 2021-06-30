@@ -1,0 +1,3 @@
+* verificar mudanças antes do commit de arquivos em staged*
+-> git diff
+-> git diff --name-only
