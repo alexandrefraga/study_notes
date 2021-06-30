@@ -1,0 +1,18 @@
+* Status do ciclode vida: *
+    - untracked
+    - unmodified
+    - modified
+    - staged
+
+* Exemplo do ciclo *
+    -> criar arquivo "sample.txt" dentro da pasta com git inicializado;
+        -> git status (untracked)
+    -> git add sample.txt
+    -> git add *.txt
+    -> git add .
+        -> git status (staged)
+    -> ao editar o arquivo
+        -> git status (modified)
+        -> git add . (staged)
+    -> o commit... (sobre arquivos em staged)
+        -> git commit -m "mensagem descritiva do commit"
