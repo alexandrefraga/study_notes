@@ -8,3 +8,6 @@
     -> git reset --soft hashdocommitanterior (retorna ao commit anterior adicionado dos arquivos modificados em staged)
     -> git reset --mixed hashdocommitanterior (retorna ao commit anterior adicionado dos arquivos modificados - modified)
     -> git reset --hard hashdocommitanterior (retorna ao commit anterior, sem alterações posteriores)
+        * cuidado ao utilizar nivel hard em repositorio utilizando github, pois mata o histórioco
+         e pode gerar diferença entre o repositório local e remoto *
+         

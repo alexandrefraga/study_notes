@@ -1,0 +1,14 @@
+-> acessar conta no github
+-> criar repositório
+
+* conectar repositório local ao github *
+    -> git remote add origin https://github.com/alexandrefraga/study_notes.git
+    -> git push -u origin master
+        
+* enviando alterações para github
+    -> git push origin master
+
+* clone de repositótio remoto
+    -> git clone chavesshouhttpdorepositorio novonomelocaldorepositorio
+
+* fork (faz uma cópia de um repositório de outra pessoa)
