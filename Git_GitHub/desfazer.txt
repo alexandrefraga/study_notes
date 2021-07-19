@@ -11,3 +11,9 @@
         * cuidado ao utilizar nivel hard em repositorio utilizando github, pois mata o histórioco
          e pode gerar diferença entre o repositório local e remoto *
          
+
+* revert *
+cria um novo commit desfazendo as alterações do commit anterior, mas sem apagar!
+permite desfaser alterações causadas por um commit defeituso, 
+permitindo revisar as alterações feitas, pois não será apagado.
+    -> git revert hashedcommitdefeituoso

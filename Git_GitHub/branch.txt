@@ -1,0 +1,30 @@
+* criar branch "exemplo"
+    -> git checkout -b exemplo
+
+* listar branch's (a branch atual será listada com * )
+    -> git branch
+
+* entrando em uma branch existente ("exemplo")
+    -> git checkout exemplo
+
+* apagar uma branch local("exemplo")
+    -> git branch -D exemplo
+
+* apagar uma branch remota("exemplo")
+    -> git push origin :exemplo
+
+* unir branches -> merge
+    - cria um novo commit pra unir as branches
+    - o histórico pode ficar poluído
+
+    
+
+* unir branches -> rebase
+    - move o commit da branch para a fila principal (no final)
+    - não cria novo commit e o histórico é linear
+    - perde order cronológica
+
+*exemplo: no contexto de duas branches(master e teste)
+    -> na branch master(ativa)
+    -> git merge test
+    -> git rebase test

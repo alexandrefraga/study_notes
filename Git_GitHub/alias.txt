@@ -1,0 +1,5 @@
+criando alias para os comandos...
+
+*criando alias para git status
+    -> git config --global alias.s status
+        -> git s 

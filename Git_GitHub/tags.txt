@@ -1,0 +1,17 @@
+criar tag
+
+*anotada
+    -> git tag -a 1.0.0 -m "mensagem descritiva da tag"
+
+*subir tags
+    -> git push origin master --tags
+
+*listar
+    -> git tag
+
+
+*apagar tag local
+    -> git tag -d 1.0.0
+
+*apagar tag remota
+    -> git push origin :1.0.0

@@ -1,0 +1,13 @@
+salva as alterações em andamento em separado, retornando ao estado inicial do último commit.
+    -> git stash
+
+recuperando as alterações...
+    -> git stash apply
+
+listando...
+    -> git stash listando
+
+apagando...
+    -> git stash clear
+
+    
