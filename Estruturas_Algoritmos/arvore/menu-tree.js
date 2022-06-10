@@ -33,13 +33,11 @@ function addPath(account, i, arrayData = []) {
     return account;
 }
 
-const accountWithPath = accounts.map(addPath) 
-
-let tree = {
-    left: undefined,
-    right: undefined,
-    value: undefined
-}
+// let tree = {
+//     left: undefined,
+//     right: undefined,
+//     value: undefined
+// }
 
 function insert(tree, value) {
     if(tree.value){
@@ -64,6 +62,35 @@ function inOrder(tree, res = []) {
     return res;
 }
 
-accountWithPath.forEach(e => insert(tree, e))
-const listaOrdenada = inOrder(tree);
-listaOrdenada.forEach(e => console.log(`${e.path} ${e.account}`));
+function run(accounts, fnAccountMap, nExec = 1) {
+    for (let i = 0; i < nExec; i++) {
+        let tree = {
+            left: undefined,
+            right: undefined,
+            value: undefined
+        }
+        const accountWithPath = accounts.map(fnAccountMap)
+        accountWithPath.forEach(e => insert(tree, e))
+        accounts = inOrder(tree)
+    }
+    return accounts;
+}
+
+
+var inicio = performance.now();
+const inOrderAccountsWithPath = run(accounts, addPath, 100);
+console.log("Tempo de execução: ",performance.now() - inicio);
+
+inOrderAccountsWithPath.forEach(e => console.log(`${e.path} ${e.account}`));
+
+
+
+
+// accountWithPath.forEach(e => insert(tree, e))
+// const listaOrdenada = inOrder(tree);
+// listaOrdenada.forEach(e => console.log(`${e.path} ${e.account}`));
+
+// accountWithPath.sort(function(a,b) {
+//     return a.path < b.path ? -1 : a.path > b.path ? 1 : 0;
+// });
+// accountWithPath.forEach(e => console.log(`${e.path} ${e.account}`));
